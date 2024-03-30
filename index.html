@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    .espacio{padding: 50px 15px;
+            border: solid thin #ccc;
+            margin: 60px auto;
+            border-radius: 10px;
+        }
+
+    .box{padding-bottom: 100px;}
+</style>
+
+<body>
+    <section class="box">
+    <main class="container">
+
+        <h2>Contraseña válida</h2>
+
+        <label class="form-label" for="ex1-input-contrasena">Contraseña</label>
+        <input class="form-control" type="text" id="ex1-input-contrasena">
+        <button class="btn btn-primary mt-2" id="ex1-button-verificar" onclick="calcEx1()">VERIFICAR CONTRASEÑA</button>
+        <!-- <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div> -->
+    </main>
+    <section class="container espacio">
+        <h2>Calcular impuestos</h2>
+
+        <label class="form-label" for="edad">Edad</label><br>
+        <input class="form-control" type="number" id="edad"><br>
+
+        <label class="form-label" for="edad">Ingresos</label><br>
+        <input class="form-control" type="number" id="ingresos"><br>
+        <button class="btn btn-primary mt-2" id="calcular_ingreso">Calcular impuestos</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>IMC (Índice de masa corporal)</h2>
+
+        <label class="form-label" for="edad">Peso</label><br>
+        <input class="form-control" type="text" id="peso"><br>
+        
+        <label class="form-label" for="edad">Altura</label><br>
+        <input class="form-control" type="text" id="altura"><br>
+        <button class="btn btn-primary mt-2" id="calcular_bmi">Calcular BMI</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>4. Imprimir un arreglo</h2>
+
+        <button class="btn btn-primary mt-2" id="printArrey">Imprimir arreglo</button>
+        <article id="box_arreglo">
+
+        </article>
+    </section>
+
+
+    <section class="container espacio">
+        <h2>5. Número de Likes</h2>
+         
+        <label class="form-label" for="likes">Likes</label><br>
+        <input class="form-control" type="number" id="numeroLikes"><br>
+        <button class="btn btn-primary mt-2" id="covertir_likes">Converti Likes</button>
+    </section>
+
+
+    <section class="container espacio">
+        <h2>6. FizzBuzz</h2>
+         
+        <label class="form-label" for="likes">Elige un número</label><br>
+        <input class="form-control" type="number" id="numero"><br>
+        <button class="btn btn-primary mt-2" id="fizzbuzz">Imprimir</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>7. Contar rango de números</h2>
+         
+        <label class="form-label" for="number1">Primer Número</label><br>
+        <input class="form-control" type="number" id="number1"><br>
+        <label class="form-label" for="number2">Segundo Número</label><br>
+        <input class="form-control" type="number" id="number2"><br>
+        <button class="btn btn-primary mt-2" id="imprimeRango">Imprimir rango</button>
+    </section>
+
+
+    <section class="container espacio">
+        <h2>8. Sumar rango de números</h2>
+         
+        <label class="form-label" for="value1">Primer Número</label><br>
+        <input class="form-control" type="number" id="value1"><br>
+        <label class="form-label" for="value2">Segundo Número</label><br>
+        <input class="form-control" type="number" id="value2"><br>
+        <button class="btn btn-primary mt-2" id="sumarRango">Sumar rango</button>
+    </section>
+
+
+    <section class="container espacio">
+        <h2>9. Número de aes (letra "a")</h2>
+         
+        <label class="form-label" for="valorTexto">Escribe un texto</label><br>
+        <input class="form-control" type="text" id="valorTexto"><br>
+        <button class="btn btn-primary mt-2" id="bnt_busca_texto">Buscar aes</button>
+    </section>
+
+
+    <section class="container espacio">
+        <h2>10. Número de caracteres</h2>
+         
+        <label class="form-label" for="valorTexto">Escribe un texto</label><br>
+        <input class="form-control" type="text" id="palabra"><br>
+        <label class="form-label" for="valorTexto">Escribe un caracter</label><br>
+        <input class="form-control" type="text" id="caracter1"><br>
+        <button class="btn btn-primary mt-2" id="bnt_busca_caracteres">Numero de caracteres</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>11. Sumar arreglo</h2>
+          
+        <button class="btn btn-primary mt-2" id="boxArreglo" onclick= "sumarArreglo()">Sumar arreglo</button>
+    </section>
+
+    
+    <section class="container espacio">
+        <h2>12. Multiplicar arreglo</h2>
+          
+        <button class="btn btn-primary mt-2" id="boxArreglo" onclick= "multiplicaArreglo()">multiplica arreglo</button>
+    </section>
+
+
+    <section class="container espacio">
+        <h2>13. Remover ceros OK</h2>
+
+        <button class="btn btn-primary mt-2" id="btn_remover">Remover ceros</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>14. Sumar arreglo entre el rango</h2>
+        <label class="form-label" for="valorTexto">Valor 1</label><br>
+        <input class="form-control digito" type="text"><br>
+
+        <label class="form-label" for="valorTexto">Valor 2</label><br>
+        <input class="form-control digito" type="text"><br> 
+
+        <label class="form-label" for="valorTexto">Valor 3</label><br>
+        <input class="form-control digito" type="text"><br> 
+
+        <label class="form-label" for="valorTexto">Valor 4</label><br>
+        <input class="form-control digito" type="text"><br> 
+
+        <label class="form-label" for="valorTexto">Valor 5</label><br>
+        <input class="form-control digito" type="text"><br>
+        
+        <label class="form-label" for="valorTexto">Valor 6</label><br>
+        <input class="form-control digito" type="text"><br> 
+        <button class="btn btn-primary mt-2" id="arrSuma">multiplica arreglo</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>15. Transcribir ADN a ARN</h2>
+          
+        <button class="btn btn-primary mt-2" id="boxArreglo" onclick= "multiplicaArreglo()">multiplica arreglo</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>16. Capitalizar palabra</h2>
+         
+        <label class="form-label" for="valorTexto">Escribe un texto</label><br>
+        <input class="form-control" type="text" id="palabra"><br>
+        <label class="form-label" for="valorTexto">Escribe un caracter</label><br>
+        <input class="form-control" type="text" id="caracter1"><br>
+        <button class="btn btn-primary mt-2" id="bnt_busca_caracteres">Numero de caracteres</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>17. Capitalizar cada palabra</h2>
+         
+        <label class="form-label" for="valorTexto">Escribe un texto</label><br>
+        <input class="form-control" type="text" id="palabra"><br>
+        <label class="form-label" for="valorTexto">Escribe un caracter</label><br>
+        <input class="form-control" type="text" id="caracter1"><br>
+        <button class="btn btn-primary mt-2" id="bnt_busca_caracteres">Numero de caracteres</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>18. Encontrar el número máximo</h2>
+         
+        <label class="form-label" for="valorTexto">Escribe un texto</label><br>
+        <input class="form-control" type="text" id="palabra"><br>
+        <label class="form-label" for="valorTexto">Escribe un caracter</label><br>
+        <input class="form-control" type="text" id="caracter1"><br>
+        <button class="btn btn-primary mt-2" id="bnt_busca_caracteres">Numero de caracteres</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>19. Encontrar el número mínimo</h2>
+         
+        <label class="form-label" for="valorTexto">Escribe un texto</label><br>
+        <input class="form-control" type="text" id="palabra"><br>
+        <label class="form-label" for="valorTexto">Escribe un caracter</label><br>
+        <input class="form-control" type="text" id="caracter1"><br>
+        <button class="btn btn-primary mt-2" id="bnt_busca_caracteres">Numero de caracteres</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>20. Generar contraseña</h2>
+         
+        <label class="form-label" for="valorTexto">Escribe un texto</label><br>
+        <input class="form-control" type="text" id="palabra"><br>
+        <label class="form-label" for="valorTexto">Escribe un caracter</label><br>
+        <input class="form-control" type="text" id="caracter1"><br>
+        <button class="btn btn-primary mt-2" id="bnt_busca_caracteres">Numero de caracteres</button>
+    </section>
+
+    <section class="container espacio">
+        <h2>21. Encontrar números pares en un arreglo</h2>
+         
+        <label class="form-label" for="valorTexto">Escribe un texto</label><br>
+        <input class="form-control" type="text" id="palabra"><br>
+        <label class="form-label" for="valorTexto">Escribe un caracter</label><br>
+        <input class="form-control" type="text" id="caracter1"><br>
+        <button class="btn btn-primary mt-2" id="bnt_busca_caracteres">Numero de caracteres</button>
+    </section>
+
+    
+          
+
+
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
